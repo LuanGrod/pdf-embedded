@@ -1,5 +1,3 @@
 {
-  "/(pages)/page": "app/(pages)/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js"
+  "/(pages)/page": "app/(pages)/page.js"
 }

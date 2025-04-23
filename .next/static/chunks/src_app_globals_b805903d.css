@@ -300,6 +300,10 @@
 @layer components;
 
 @layer utilities {
+  .invisible {
+    visibility: hidden;
+  }
+
   .visible {
     visibility: visible;
   }
@@ -436,8 +440,12 @@
     min-height: 100vh;
   }
 
-  .flex-shrink {
+  .flex-shrink, .shrink {
     flex-shrink: 1;
+  }
+
+  .flex-grow, .grow {
+    flex-grow: 1;
   }
 
   .border-collapse {
@@ -519,6 +527,10 @@
 
   .font-\[family-name\:var\(--font-geist-sans\)\] {
     font-family: var(--font-geist-sans);
+  }
+
+  .capitalize {
+    text-transform: capitalize;
   }
 
   .lowercase {

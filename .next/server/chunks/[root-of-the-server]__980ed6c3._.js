@@ -63,21 +63,21 @@ __turbopack_context__.s({
 });
 function manifest() {
     return {
-        name: 'Next.js PWA',
-        short_name: 'NextPWA',
-        description: 'A Progressive Web App built with Next.js',
+        name: 'nome completo do medQRE',
+        short_name: 'medQRE',
+        description: 'medQRE é um aplicativo para leitura de QR Codes',
         start_url: '/',
         display: 'standalone',
-        background_color: '#ffffff',
-        theme_color: '#000000',
+        background_color: '#0f0',
+        theme_color: '#fff',
         icons: [
             {
-                src: '/favicon/icon-192x192.png',
+                src: '/icon-192x192.png',
                 sizes: '192x192',
                 type: 'image/png'
             },
             {
-                src: '/favicon/icon-512x512.png',
+                src: '/icon-512x512.png',
                 sizes: '512x512',
                 type: 'image/png'
             }
