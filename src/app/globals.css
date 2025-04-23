@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* Remove animações padrões */
+::view-transition-group(*), 
+::view-transition-old(*), 
+::view-transition-new(*) {
+  animation: none;
+}
+
+/* Garante contexto de empilhamento */
+::view-transition-group(*) {
+  isolation: isolate;
+  z-index: auto;
+}
+
+/* Página antiga (saindo) */
+::view-transition-old(*) {
+  z-index: 1;
+  /* Fica parada */
+  /* animation: oldSlideOut 0.5s forwards; */
+}
+
+/* Página nova (entrando) */
+::view-transition-new(*) {
+  z-index: 999;
+  /* Começa fora da tela à direita */
+  animation: newSlideIn 0.3s ease-in-out;
+}
+
+/* Animação para a página antiga (pode só escurecer ou sumir, se preferir) */
+@keyframes oldSlideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-20%);
+    /* Ou use opacity: 0 se quiser que suma */
+  }
+}
+
+/* Animação para a página nova (entra da direita para a esquerda) */
+@keyframes newSlideIn {
+  from {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
